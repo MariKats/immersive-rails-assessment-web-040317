@@ -1,0 +1,8 @@
+<h1>Episode Number:<%= @appearance.episode.number %></h1> <br>
+
+<li>Guest Name: <%= @appearance.guest.name %></li><br>
+<li>Rating: <%= @appearance.rating %></li><br>
+
+
+<%= link_to 'Back to all', guests_path %>
+<%= link_to 'Create Appearance', new_appearance_path %>

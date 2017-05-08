@@ -1,0 +1,22 @@
+<h1>Create a new Appearance: </h1>
+<%= form_for(@appearance) do |f|%>
+<%= f.label :episode_id %>
+<%= f.number_field :episode_id %><br>
+<%= f.label :guest_id %>
+<%= f.number_field :guest_id %><br>
+<%= f.label :rating %>
+<%= f.number_field :rating %><br>
+<%= f.submit %>
+<% end %>
+
+<% if @appearance.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@appearance.errors.count, "error") %> prohibited this appearance from being saved:</h2>
+
+    <ul>
+    <% @appearance.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
