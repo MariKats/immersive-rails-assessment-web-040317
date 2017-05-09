@@ -10,10 +10,8 @@ class AppearancesController < ApplicationController
 
   def create
     @appearance = Appearance.new(appearance_params)
-    # @appearance[:episode_id] = @appearance.episode.id
-    # @appearance[:guest_id] = @appearance.guest.id
     if @appearance.save
-      redirect_to appearance_path(@appearance)
+      redirect_to appearance.guest
     else
       render :new
     end
