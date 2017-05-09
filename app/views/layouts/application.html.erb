@@ -12,7 +12,7 @@
 
     <nav>
       <% if session[:user_id].present? %>
-      <li>Welcome, <%= @curent_user.username)%></li>
+      <li>Welcome, <%= curent_user.username %></li>
       <li><%= link_to "Log Out", logout_path, method: :delete%></li>
       <%else%>
       <li><%= link_to 'Log In', login_path %></li>
